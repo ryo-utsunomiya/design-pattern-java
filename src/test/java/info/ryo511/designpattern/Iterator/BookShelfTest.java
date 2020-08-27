@@ -1,6 +1,6 @@
 package info.ryo511.designpattern.Iterator;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 

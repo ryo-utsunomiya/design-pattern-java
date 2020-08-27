@@ -12,8 +12,8 @@ public class BookShelf implements Iterable<Book> {
     this(10);
   }
 
-  public BookShelf(int maxsize) {
-    this.books = new ArrayList<>(maxsize);
+  public BookShelf(int initialCapacity) {
+    this.books = new ArrayList<>(initialCapacity);
   }
 
   public Book getBookAt(int index) {
