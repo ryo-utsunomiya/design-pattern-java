@@ -1,16 +1,18 @@
 package info.ryo511.designpattern.Adapter;
 
-public class EffectiveBanner extends Banner implements Effecter {
+public class EffectiveBanner implements Effecter {
+
+  private final Banner banner;
 
   public EffectiveBanner(String s) {
-    super(s);
+    this.banner = new Banner(s);
   }
 
   public String weak() {
-    return getWithParen();
+    return banner.withParen();
   }
 
   public String strong() {
-    return getWithAster();
+    return banner.withAster();
   }
 }

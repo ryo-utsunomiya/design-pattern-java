@@ -8,11 +8,11 @@ public class Banner {
     this.string = s;
   }
 
-  public String getWithParen() {
+  public String withParen() {
     return "(" + this.string + ")";
   }
 
-  public String getWithAster() {
+  public String withAster() {
     return "*" + this.string + "*";
   }
 }
