@@ -20,7 +20,7 @@ public class StandardOutputStream extends PrintStream {
    * @return 改行を含まない文字。終端の場合はnull
    */
   public String readLine() {
-    String line = "";
+    var line = "";
     try {
       if ((line = br.readLine()) != null) {
         return line;
@@ -31,5 +31,14 @@ public class StandardOutputStream extends PrintStream {
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
+  }
+
+  public String readAll() {
+    var sb = new StringBuilder();
+    var line = "";
+    while ((line = readLine()) != null) {
+      sb.append(line).append("\n");
+    }
+    return sb.toString();
   }
 }
